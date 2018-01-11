@@ -1,0 +1,57 @@
+[debug] [2018-01-11T15:57:21.713Z] ----------------------------------------------------------------------
+[debug] [2018-01-11T15:57:21.717Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --project onetp-8ec3c
+[debug] [2018-01-11T15:57:21.718Z] CLI Version:   3.16.0
+[debug] [2018-01-11T15:57:21.718Z] Platform:      darwin
+[debug] [2018-01-11T15:57:21.718Z] Node Version:  v6.9.4
+[debug] [2018-01-11T15:57:21.719Z] Time:          Thu Jan 11 2018 10:57:21 GMT-0500 (EST)
+[debug] [2018-01-11T15:57:21.719Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-11T15:57:21.732Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-11T15:57:21.732Z] > authorizing via signed-in user
+[debug] [2018-01-11T15:57:21.735Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/onetp-8ec3c  
+  
+ Thu Jan 11 2018 10:57:21 GMT-0500 (EST)
+[debug] [2018-01-11T15:57:22.074Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-11T15:57:22.077Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/onetp-8ec3c/tokens  
+  
+ Thu Jan 11 2018 10:57:22 GMT-0500 (EST)
+[debug] [2018-01-11T15:57:22.448Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'onetp-8ec3c'...
+[info] 
+[info] i  deploying functions
+[debug] [2018-01-11T15:57:22.685Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.4.2",
+    "firebase-functions": "^0.7.1",
+    "twilio": "^3.0.0-rc.13"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-01-11T15:57:22.686Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/onetp-8ec3c?view=CONSUMER_VIEW  
+  
+ Thu Jan 11 2018 10:57:22 GMT-0500 (EST)
+[debug] [2018-01-11T15:57:22.687Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/onetp-8ec3c?view=CONSUMER_VIEW  
+  
+ Thu Jan 11 2018 10:57:22 GMT-0500 (EST)
+[debug] [2018-01-11T15:57:23.254Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-11T15:57:23.272Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2018-01-11T15:57:23.273Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/onetp-8ec3c  
+  
+ Thu Jan 11 2018 10:57:23 GMT-0500 (EST)
+[debug] [2018-01-11T15:57:23.273Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/onetp-8ec3c/apiKeys  
+  
+ Thu Jan 11 2018 10:57:23 GMT-0500 (EST)
+[debug] [2018-01-11T15:57:23.547Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-11T15:57:23.678Z] <<< HTTP RESPONSE 200
