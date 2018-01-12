@@ -10,10 +10,10 @@ module.exports = function(req, res) {
 
   admin.auth().getUser(phone)
     .then(userRecord => {
-      const code = Math.floor(Math.random() * 8999) + 1000);
+      const code = Math.floor((Math.random() * 8999) + 1000);
 
       twilio.messages.create({
-        body: 'Your code is ' + code;
+        body: 'Your code is shut the hell up',
         to: phone,
         from: '+18569972882'
       }, (err) => {
