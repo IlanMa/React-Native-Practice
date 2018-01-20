@@ -14,29 +14,48 @@ import ReviewScreen from './screens/ReviewScreen';
 export default class App extends React.Component {
 
   render() {
-    const MainNavigator = TabNavigator({
-      welcome: { screen: WelcomeScreen },
-      auth: { screen: AuthScreen },
-      main: {
-        screen: TabNavigator({
-          map: { screen: MapScreen },
-          deck: { screen: DeckScreen },
-          review: {
-            screen: StackNavigator({
-              review: { screen: ReviewScreen },
-              settings: { screen: SettingsScreen }
-            })
-          }
+
+const MainNavigator = TabNavigator({
+  welcome: { screen: WelcomeScreen },
+  auth: { screen: AuthScreen },
+  main: {
+    screen: TabNavigator({
+      map: { screen: MapScreen },
+      deck: { screen: DeckScreen },
+      review: {
+        screen: StackNavigator({
+          review: { screen: ReviewScreen },
+          settings: { screen: SettingsScreen }
         })
       }
-    }, {
-      navigationOptions: {
-        tabBarVisible: false
-      },
-      lazy: true,
+    },
+    {
+      tabBarPosition: 'bottom',
       swipeEnabled: false,
-      animationEnabled: false
-    });
+      lazy: true, // Each screen will not mount/load until user clicks on them
+      animationEnabled: false,
+      tabBarOptions: {
+        showIcon: true,
+        iconStyle: {
+          width: 30,
+          height: 30
+        }
+      }
+    })
+  }
+},
+  {
+    navigationOptions: {
+      tabBarVisible: false
+    },
+    tabBarPosition: 'bottom',
+    swipeEnabled: false,
+    lazy: true, // Each screen will not mount/load until user clicks on them
+    animationEnabled: false
+  }
+);
+
+
 
     return (
       <Provider store={store}>
